@@ -1,0 +1,119 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #96ffb1;
+}
+
+section.visible {
+    align-self: center;
+
+    border: 4px solid rgb(0, 124, 21);
+
+    background-color: rgb(255, 234, 196);
+    padding: 20px;
+    margin: 20px;
+    max-width: 1200px;
+
+    /* to keep image within; prevent it floating out:*/
+    overflow: hidden;
+}
+
+#fotoImg{
+    float: left;
+    max-height: 300px;
+    max-width: 550px;
+    margin-right: 10px;
+    border: 1px solid black;
+}
+
+#gerecht_keuze_info > label{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#gerecht_keuze_info > span{
+    display: flex;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+}
+
+section.invisible_layout_only{
+    display: block;
+    width: 350px;
+    overflow: hidden;
+}
+
+select{
+    width: 200px;
+    display: flex;
+    float: right;
+    margin-bottom: 5px;
+    overflow-y: auto;
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(112, 255, 112);
+    text-align: left;
+    border: 1px solid black;
+}
+
+input, #bestelButton {
+    width: 60px;
+    /* display: flex; */
+    float: right;
+    margin-bottom: 5px;
+}
+
+
+section.bestellingListSection{
+    display: flex;
+    overflow: hidden;
+    
+}
+
+button.bestellingLine{
+    left: 50px;
+    width: calc(100% - 10px);
+    max-width: 1200px;
+    margin: 3px;
+    padding: 2px;
+}
+
+@media (max-width: 700px) {
+
+    section.visible {
+        display: grid; /* via trial & error. "display" is still voodoo to me. */
+        width: calc(100% - 30px);
+        padding: 5px;
+        margin: 5px;
+    }
+
+    section.invisible_layout_only
+    {
+        display:contents;
+        margin-bottom: 3px;
+        /* width: calc(100% - 30px); */
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    section.invisible_layout_only
+    {
+        display:grid;
+        margin-bottom: 3px;
+        padding: 0px;
+        margin: 0px;        
+    }
+
+    #gerecht_keuze_info > label, 
+    #gerecht_keuze_info > span
+    {
+        display:grid;
+        margin-bottom: 3px;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+

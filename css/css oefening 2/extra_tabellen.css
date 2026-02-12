@@ -1,0 +1,12 @@
+body {
+    font-family: Calibri, sans-serif;
+}
+table {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+tr:first-child td{
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+}

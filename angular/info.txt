@@ -1,0 +1,77 @@
+- first-app opdracht
+- Belangrijkste comando's
+- Analyse, geleerd
+
+---
+- first-app opdracht
+Voor jullie heb ik 5 stapsgewijze projecten voorbereid waarmee jullie Angular beter kunnen begrijpen.
+
+1) Eerst wil ik dat jullie project 1 downloaden en uitvoeren. (ng serve) Nadat jullie het resultaat op poort 4200 hebben gezien, verwacht ik dat jullie alle bestanden één voor één bestuderen.
+
+2) Daarna voeren jullie project 2 op dezelfde manier uit en vergelijken jullie het schermresultaat met dat van project 1. Om te begrijpen waar de verschillen vandaan komen, moeten jullie de bestanden met elkaar vergelijken.
+
+3,4,5) Ga vervolgens op dezelfde manier verder met project 3, 4 en 5.
+In project 5 zal het project volledig afgerond zijn en bereiken jullie de uiteindelijke webpagina die we willen bouwen.
+ 
+Wanneer jullie alles hebben afgerond, stuur mij dan een privébericht om te laten weten dat jullie klaar zijn.
+Voor vragen kunnen jullie altijd Teams gebruiken.
+
+
+---
+- Belangrijkste comando's
+
+Deze korte versie lukte moet app02. Misschien is het overal genoeg?
+- npm install   -> maakt "node_modules" en downloadt daar vanalles.
+- ng serve -o    ->  uitvoeren code op server, poort 4200, vraagt nog iets over pseudonym ("n" antwoorden).
+- npx ng serve --open   (alternatief)
+- Indien "An unhandled exception occurred: Cannot find package 'vite' imported from "...
+-> cd src   en  daar   npm install    vanuit de src folder; downloadt nog meer.
+
+
+- Unzip zonder fouten -> niet unzippen in folder die al een lang pad heeft, want anders foutmelding "path too long".
+- Geunzipte folder "first-app_01-hello-world" bevat nog eens folder met zelfde naam. 
+  Inhoud van diepste moven to eerste folder. Lege folder deleten.
+- Van app1 enkel src en basisfiles behouden, .angular, .git, node_modules folders deleten.
+- Van basisfolder first-app_01-hello-world "Open in tegerated terminal".
+- npm install   -> maakt "node_modules" en downloadt daar vanalles.
+- npm install -g @angular/cli  -> downloadt nog meer.
+- cd src  (change directory)
+- ls      (toont inhoud directory)
+- npm install -g @angular/cli  ->  vanuit de src folder; downloadt nog meer.
+- (tsc main.ts tussendoor geprobeerd, geen idee of nuttig, probeer eerst verdere stappen zonder dit.)
+- ng serve -o    -> vraagt nog iets over pseudonym ("n" antwoorden).
+
+
+---
+- Analyse, geleerd:
+
+- Om te kunnen bewaren in github, de meegeleverde .git folder verwijderen.
+- gitignore uitbreiden met wat niet noodzakelijk bewaard moet worden, 
+  vb node_modules, .angular, .angular-cache, ... (no commas).
+
+Root  (configuratiefiles):
+- angular.json  configuratiefile
+- BUILD.bazel   open-source build- en testtool, vergelijkbaar met Make, Maven en Gradle.
+- config.json   configuratiefile
+- package-lock.json   file met versienummers van packages?
+- package.json        file met versienummers van packages?
+- package.json.template   file met oudere/vorige versienummers van packages?
+- tsconfig.app.json   indicates directory is root of TypeScript project.
+  Specifies root files & compiler options to compile project.
+
+src   ()
+- index.html, styles.css, main.ts (wordt main.js), favicon.ico, app folder, assets folder.
+- src/index.html            quasi leeg
+- src/main.ts  -> src/main.js
+
+  import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/platform-browser';
+  import {AppComponent} from './app/app.component';
+  bootstrapApplication(AppComponent, {providers: [provideProtractorTestingSupport()]}).catch((err) =>
+    console.error(err),
+  );
+
+- src/styles.css
+
+- src/favicon.ico, 
+- src/app
+- src/assets

@@ -1,0 +1,43 @@
+/* CSS Oefening 1 - Tabel */
+table {
+    border: 5px solid blue;
+    width: 500px;/* Prevent deformation on extreme zooming in: */
+    border-spacing: 0; /* set in table but impacts cells */
+    background-color: lightblue; /* most prevalent color in table */
+}
+
+td  {
+    width: 50px;
+    height: 50px;
+}
+
+tr:nth-child(odd) td:nth-child(odd){
+    background-color: white;
+}
+
+tr:nth-child(even) td:nth-child(even){
+    background-color: blue;
+}
+
+
+/* Combining on selectors, or on content, or nesting css all possible. */
+
+/* Nesting selectors: */
+/* table tr:nth-child(odd)  {
+    td:nth-child(even){background-color: lightblue;}
+}
+table tr:nth-child(even) {
+    td:nth-child(odd){background-color: lightblue;}
+    td:nth-child(even){background-color: blue;}
+} */
+
+/* Combining selectors: */
+/* tr:nth-child(odd) td:nth-child(even), 
+tr:nth-child(even) td:nth-child(odd){
+    background-color: lightblue;
+}
+tr:nth-child(even) td:nth-child(even){
+    background-color: blue;
+} */
+
+

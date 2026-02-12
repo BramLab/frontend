@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <h1>Resto 'Het Krokantje'</h1>
+
+
+        <section id="gerecht_keuze_info" class="visible">
+            <img id="fotoImg" src="" />
+            <label for="naamSpan">Naam: </label>
+            <span id="naamSpan">Sprinkhaan</span>
+            <label for="prijsSpan">Prijs: </label>
+            <span id="prijsSpan">€5.99</span>
+            <label for="beschrijvingSpan">Beschrijving: </label>
+            <span id="beschrijvingSpan">Krokante sprinkhaan op een schietgebedje van kakkerlak</span>
+        </section>
+
+
+        <section id="gerecht_keuze_decide" class="visible">
+            
+            <section class="invisible_layout_only">
+                <label for="gangenSelect">Gang:</label>
+                <select name="Gangen" id="gangenSelect" class="dropdown"></select>
+                <br />
+            </section>
+
+            <section class="invisible_layout_only">
+                <label for="keuzeSelect">Keuze:</label>
+                <select id="keuzeSelect" class="scrollable" size="5"></select>
+                <br />
+            </section>
+
+            <section class="invisible_layout_only">
+                <label for="aantalInput">Aantal personen:</label>
+                <input id="aantalInput" />
+                <br />
+            </section>
+
+            <section class="invisible_layout_only">
+            <button id="bestelButton">Bestel</button>
+            </section>
+            
+        </section>
+
+
+        <section id="bestellingListSection" class="visible">
+            (nog geen bestelling)
+        </section>
+
+
+    </body>
+</html>

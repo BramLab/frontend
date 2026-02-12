@@ -1,0 +1,91 @@
+
+nav::before {
+    background: url("../images/listIcon.svg") no-repeat center / contain;
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+nav {
+    display: flex;
+    align-items: left;
+    margin: 10px 0;
+}
+nav a {
+    display: flex;
+    align-items: left;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    margin-right: 10px;
+}       
+nav a:hover, nav a:focus {
+    color: darkred;
+    font-weight: bolder;
+}
+@media (max-width: 400px) {
+    nav {
+        flex-direction: column;
+    }
+}
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #fbfad9;
+}
+main{
+    border-top: 2px dotted red;
+    border-bottom: 2px dotted red;
+    padding: 10px;
+}
+article {
+    align-self: center;
+    border: var(--border);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    /* 25%transparantie = 75%opacity? */
+    background-color: rgba(255, 209, 124, 0.75);
+    padding: 20px;
+    margin: 20px;
+    max-width: 1280px;
+
+    /* to keep image within; prevent it floating out:*/
+    overflow: hidden;
+}
+
+.img_animal {
+    float: right;
+    max-width: 200px;
+}
+
+/* variable for uniformity */
+:root {
+    --border: 4px solid #cd0303;
+}
+.dieren {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+.dieren2 {
+    text-decoration: underline wavy black;
+}
+.text_emphasize{
+    font-weight: bold;
+}    
+footer>p {
+    text-align: center;
+}
+
+/* only Rode Vos en Groene Boomkikker: */
+.special_paragraph:first-of-type{
+    font-weight: bold;
+}
+
+/* only home page */
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+

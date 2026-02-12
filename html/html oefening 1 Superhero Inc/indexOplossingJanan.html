@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Superhero Inc.</title>
+
+  <style>
+  .term {
+    background-color: yellow;
+    font-weight: bold;
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- HOOFDTITEL -->
+  <h1>Superhero Inc.</h1>
+
+  <!-- ARTIKEL 1 -->
+  <article>
+    <h2>Onze missie</h2>
+    <p>
+      Superhero Inc is een internationale organisatie samenwerkt met elke 
+      <span>superheld</span> om mensen in nood te helpen. Onze superhelden zetten zich dagelijks in om de wereld veiliger te maken door hun unieke krachten op een positieve manier te gebruiken
+    </p>
+    <p>
+      Door samenwerking, opleiding en ondersteuning zorgen we ervoor dat elke <span>superheld</span> op een veilige, efficiënte en doeltreffende manier kan worden ingezet
+    </p>
+  </article>
+
+  <!-- ARTIKEL 2 -->
+  <article>
+    <h2>Hoe werken onze teams?</h2>
+    <p>
+      Onze <span>superhelden</span> met unieke talenten. worden ingedeeld in gespecialiseerde teams afhankelijk van hun kracht, ervaring en persoonlijkheid. Zo kunnen we in elke situatie de juiste<span>superheld</span> aanbieden voor elke uitdaging.
+    </p>
+    <p>
+      Elk team werkt volgens een duidelijk plan, zodat onze <span>superhelden</span> snel kunnen
+ingrijpen wanneer dat nodig is.
+    </p>
+  </article>
+
+  <!-- ARTIKEL 3: ANDERE ILLUSTRATIE SUPERHELDEN -->
+  <article>
+    <h3>Andere illustratie superhelden</h3>
+
+    <!-- Inleidende tekst -->
+    <p>
+      Hieronder zie je enkele voorbeelden van 
+      <span>superhelden</span> uit ons internationale netwerk.Elke superheld
+heeft een eigen rol en specialiteit.
+    </p>
+
+    <!-- Vier superhelden, elk in een aparte paragraaf -->
+    <p>
+      <strong>Night Sentinel</strong> – een stille 
+      <span>superheld</span> die in het donker opereert en ongezien kan bewegen.
+    </p>
+    <p>
+      <strong>Solar Nova</strong> – een energieke<span>superheld</span> die zonnekracht 
+      omzet in lichtstralen en beschermende schilden.
+    </p>
+    <p>
+      <strong>Quantum Runner</strong> – een razendsnelle 
+      <span>superheld</span> die in enkele seconden door grote steden kan reizen.
+    </p>
+    <p>
+      <strong>Echo Guardian</strong> – een <span>superheld</span> die 
+      geluidsgolven gebruikt om mensen te beschermen en gevaar te detecteren.
+    </p>
+  </article>
+
+  <!-- COPYRIGHT-TEKST IN EEN DIV ONDERAAN -->
+  <footer>
+    <p>
+      © 2022 Superhero Inc.<br>
+      Bron: geeks.media
+    </p>
+  </footer>
+
+ <!-- SPAN automatisch toevoegen -->
+  <script>
+    document.body.innerHTML = document.body.innerHTML
+      .replace(/superhelden/gi, '<span class="term">$&</span>')
+      .replace(/superheld/gi, '<span class="term">$&</span>');
+  </script>
+</body>
+</html>

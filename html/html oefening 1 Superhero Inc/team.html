@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="team.css" />
+    <title>Superhero Inc - Team</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: LightSteelBlue; /* #cedbff;  https://www.websitecolorchooser.com/tools/color-name-finder/ */
+
+        }
+        header {
+            background-color: lightgreen;
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* 3 kinds of buttons, must resemble: */
+        input[type="submit"] {      /*Lees meer & Ontmoet, onderaan sections*/
+            background-color: cornflowerblue;
+            color: white;
+            display: inline;/* changed from block to inline */
+            border-radius: 3px;
+            border-color: transparent;
+            padding: 5px;
+        }
+        button {                /*Versturen rechts*/
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 3px;
+            border-color: transparent;
+            padding: 5px;
+        }
+        nav a {               /*Menu balk*/
+            color: white;
+            background-color: cornflowerblue;
+            border-radius: 3px;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        section {
+            flex: 3;
+            border-radius: 5px;
+            padding: 5px 15px 15px 15px;
+            background-color: white;
+        }
+        aside.sidebar {
+            flex: 1;
+            padding: 15px;
+        }
+        footer {
+            background-color: lightgreen;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Superhero Inc. - Heldenteam</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="team.html">Ons team</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Over ons team</h2>
+            <p>Het heldenteam van Superhero Inc. bestaat uit een zorgvuldig geselecteerde groep professionals met uitzonderlijke vaardigheden. Onze organisatie gelooft dat elke held, ongeacht zijn kracht of achtergrond, een unieke bijdrage kan leveren aan het beschermen van de samenleving.</p>
+            <p>Ons team werkt niet alleen samen tijdens missies, maar traint ook dagelijks om hun vaardigheden te verbeteren. We investeren in technologie, strategie en communicatie zodat elk teamlid klaar staat voor noodsituaties. Door teamwork en discipline creëren we een sterke basis die bijdraagt aan succesvolle operaties wereldwijd.</p>
+            <p>Daarnaast bieden we mentale ondersteuning en persoonlijke begeleiding, zodat elke held in balans blijft. Het is onze missie om een veilige, professionele en inspirerende omgeving te creëren waarin helden kunnen groeien.</p>
+            <form action="visie.html"><input type="submit" value="Lees meer over onze visie" /></form>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Inloggen</h3>
+            <h4>
+                <label for="Gebruikersnaam">Gebruikersnaam</label>
+                <input id="Gebruikersnaam" type="text" placeholder="Gebruikersnaam"/>
+                <br/><br/>
+                <label for="Wachtwoord">Wachtwoord</label>
+                <input id="Wachtwoord" type="password" placeholder="Wachtwoord"/>
+                <br/><br/>
+            </h4>
+            <button type="submit">Versturen</button>
+            <br/>
+            
+            <hr/>
+            <h3>Gerelateerde links</h3>
+            <ul>
+                <li><a href="https://www.nasa.gov/missions/" target="_blank">Wereldwijde missies</a></li>
+                <li><a href="https://www.nasa.gov/learning-resources/" target="_blank">Trainingscentrum</a></li>
+                <li><a href="https://www.nasa.gov/careers/" target="_blank">Word een superheld</a></li>
+            </ul>
+        </aside>
+    </main>
+    <main>
+        <section>
+            <h2>Onze superhelden</h2>
+            <p>Ons team bestaat uit helden met uiteenlopende krachten: van snelheid tot energiecontrole, van stealth-technieken tot geavanceerde verdedigingstechnologie. Deze diversiteit maakt ons team geschikt voor elk type situatie, klein of groot.</p>
+            <ul>
+                <li>Night Sentinel _ expert in schaduwen en onzichtbare operaties.</li>
+                <li>Nova _ zet zonnekracht om in licht en beschermende energie.</li>
+                <li>Quantum Runner _ supersnel en strategisch in reddingsoperaties.</li>
+                <li>Echo Guardian _ gebruikt geluidsgolven om vijanden te detecteren.</li>
+            </ul>
+            <p>Naast hun krachten volgen onze helden intensieve trainingen in teamwork, ethiek en verantwoordelijkheid. Het doel is niet alleen om sterk te zijn, maar vooral om een positieve impact te maken op de wereld.</p>
+            <form action="visie.html"><input type="submit" value="Ontmoet het volledige team" /></form>
+            <!-- <a href="visie.html" >Ontmoet het volledige team</a> -->
+        </section>
+    </main>
+    <footer>© 2022 Superhero Inc. - Team pagina</footer>
+</body>
+</html>

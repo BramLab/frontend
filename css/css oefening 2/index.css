@@ -1,0 +1,33 @@
+body {
+    font-family: Calibri, sans-serif;
+}
+table, td {
+    border: 2px solid black;
+}
+td{
+    width: 50px;
+}
+
+.row_hover_change tr:hover {
+    background-color: lightgray;
+}
+
+/* Zonder gebruik van classes (simpler html): */
+tr td:first-child:not([colspan]):not([rowspan]) + td,
+tr td:is([rowspan]) + td + td{
+    text-align: center;
+}
+
+tr td:last-child:not([colspan]){
+    text-align: right;
+}
+
+/* Met gebruik van classes: */
+/* .aleft is redundant, html class as well*/
+
+/* .amid {
+    text-align: center;
+}
+.aright {
+    text-align: right;
+} */

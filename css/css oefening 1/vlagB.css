@@ -1,0 +1,23 @@
+body > div {
+    /* grid related: */
+    display: grid;
+    gap: 0 5px ;
+    grid-template-columns: auto auto auto;
+
+    /* div related: */
+    height: 100px;
+    margin: 5px 0px;
+    border: 2px dashed black;
+}
+
+div div:nth-child(1) {
+    background-color: black;
+}
+
+div div:nth-child(2) {
+    background-color: yellow;
+}
+
+div div:nth-child(3) {
+    background-color: red;
+}

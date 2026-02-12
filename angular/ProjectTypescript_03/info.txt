@@ -1,0 +1,25 @@
+Typescript Project
+
+Te corrigeren:
+
+index.html:
+<script src="index.js" type="module" defer></script>
+
+<!-- <script src="index.js"></script> -->
+
+index.ts:
+const taskInput = document.getElementById("task-input") as HTMLInputElement;
+const taskList = document.getElementById("task-list") as HTMLUListElement;
+const addButton = document.getElementById("add-button");
+const clearButton = document.getElementById("clear-button");
+
+tsconfig.json:
+-ergens comment die niet doorloopt op volgende regel -> fout.
+
+/* Language and Environment */
+"target": "es2016",
+/* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+"lib": ["DOM", "ES2016"],
+/* Specify a set of bundled library declaration files that describe the target runtime environment. */
+

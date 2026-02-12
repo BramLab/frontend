@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <title>Superhero Inc.</title>
+        <style>.term {background-color: yellow; font-weight: bold;}</style>
+    </head>
+    <body>
+        <article>
+        <main><!--only semantic info: main, footer, -->
+        <h1>Superhero Inc.</h1>
+        <h2 id="id1">Onze missie</h2>
+        <mark>milk</mark>
+        <p>Superhero Inc is een internationale organisatie die samenwerkt met elke <span>superheld</span> om mensen in nood te helpen.. Onze <span>superhelden</span> zetten zich dagelijks in om de wereld veiliger te maken door hun unieke krachten op een positieve manier te gebruiken</p>
+        <p>Door samenwerking, opleiding en ondersteuning zorgen we ervoor dat elke <span>superheld</span> op een veilige, efficiënte en doeltreffende manier kan worden ingezet</p>
+        </article>
+        <article>
+        <h2>Hoe werken onze teams?</h2>
+        <p>Onze <span>superhelden</span> met unieke talenten. worden ingedeeld in gespecialiseerde teams afhankelijk van hun kracht, ervaring en persoonlijkheid. Zo kunnen we in elke situatie de juiste <span>superheld</span> aanbieden voor elke uitdaging.</p>
+        <p>Elk team werkt volgens een duidelijk plan, zodat onze <span>superhelden</span> snel kunnen ingrijpen wanneer dat nodig is.</p>
+        <h3>Andere illustratie <span>superhelden</span></h3>
+        <p>Hieronder zie je enkele voorbeelden van <span>superhelden</span> uit ons internationale netwerk.Elke <span>superheld</span> heeft een eigen rol en specialiteit.</p>
+        <dl>
+            <dt>Night Sentinel</dt><dd>een stille <span>superheld</span> die in het donker opereert en ongezien kan bewegen.</dd>
+            <dt>Solar Nova</dt><dd>een energieke <span>superheld</span> die zonnekracht omzet in lichtstralen en beschermende schilden.</dd>
+            <dt>Quantum Runner</dt><dd>een razendsnelle <span>superheld</span> die in enkele seconden door grote steden kan reizen.</dd>
+            <dt>Echo Guardian</dt><dd>een <span>superheld</span> die geluidsgolven gebruikt om mensen te beschermen en gevaar te detecteren.</dd>
+        </dl>
+        </article>
+        </main>
+        <div>
+        <footer><p>© 2022 Superhero Inc.<br>Bron: geeks.media</p></footer>
+        </div>
+
+        <!-- <script>
+        //v1
+        document.body.innerHTML = document.body.innerHTML
+        .replace(/superhelden/gi, '<span class="term">$&</span>')
+        .replace(/superheld/gi, '<span class="term">$&</span>');
+        </script> -->
+
+        <!-- <script>
+        //v2
+        var mySpans = document.getElementsByTagName("span");
+        for( let i=0; i < mySpans.length; i++ ) {
+                mySpans[i].classList.add("term");
+        }
+        </script> -->
+        
+        <!-- <script>
+        //v3
+        var mySpans = document.querySelectorAll("span");
+        mySpans.forEach(function(item, index) {   item.classList.add("term");});
+        </script> -->
+
+        <!-- <script>
+        //v4 - arrow function
+        var mySpans = document.querySelectorAll("span");
+        mySpans.forEach(item => item.classList.add("term"));
+        </script> -->
+
+        <!-- <script>
+        //v4b - arrow function
+        document.querySelectorAll("span").forEach(item => item.classList.add("term"));
+        </script> -->
+
+<!-- Complex selectors
+Selectors can also be really powerful, as demonstrated in the following example. 
+Here, the first <input> element with the name "login" (<input name="login"/>) 
+located inside a <div> whose class is "user-panel main" (<div class="user-panel main">) 
+in the document is returned:
+const el = document.querySelector("div.user-panel.main input[name='login']");
+
+Negation
+As all CSS selector strings are valid, you can also negate selectors.
+This will select an input with a parent div with the user-panel class but not the main class:
+const el = document.querySelector(  "div.user-panel:not(.main) input[name='login']",  ); -->
+
+
+        <script>
+        //v4b - arrow function
+        //item => item.textContent.includes("Hello World!")
+
+        var mySpans = document.querySelector("span [this.textContent.includes('superhelden')]");
+        mySpans.forEach(item => item.classList.add("term"));
+        </script>
+
+        <!-- <script>
+        //v5 - direct style manipulation
+        var mySpans = document.getElementsByTagName("span");
+        for( let i=0; i < mySpans.length; i++ ) {
+        mySpans[i].style.backgroundColor = "lightgreen";
+        mySpans[i].style.fontWeight = "bold";
+        }
+        </script> -->
+
+    </body>
+</html>

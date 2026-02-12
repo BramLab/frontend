@@ -1,0 +1,36 @@
+{
+	"voorgerechten": [
+		{
+			"Naam": "Sprinkhaan",
+			"Prijs": 5.99,
+			"Beschrijving": "Krokante sprinkhaan op een bedje van kakkerlak",
+			"img": "sprinkhaan.png"
+		},
+		{
+			"Naam": "Tandoori Burger",
+			"Prijs": 4.99,
+			"Beschrijving": "Burger op basis van Tandoori, een snelle hap als hongerstillertje",
+			"img": "tandoori burger.png"
+		},
+		{
+			"Naam": "Cupcake",
+			"Prijs": 2.99,
+			"Beschrijving": "Eetbare Cupcake, met wormpjes",
+			"img": "cupcake.png"
+		}
+	],
+	"desserts": [
+		{
+			"Naam": "Lolly",
+			"Prijs": 2.99,
+			"Beschrijving": "Een lolly met inhoud, een vleugje nostalgie",
+			"img": "lolly.png"
+		},
+		{
+			"Naam": "Ijsje",
+			"Prijs": 1.99,
+			"Beschrijving": "Verfrissend ijsje met verrassende topping",
+			"img": "ijsje.png"
+		}
+	]
+}

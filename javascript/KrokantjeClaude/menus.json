@@ -1,0 +1,62 @@
+{
+  "Voorgerechten": [
+    {
+      "Naam": "Sprinkhaan",
+      "Beschrijving": "Knapperige gebakken sprinkhanen met kruidige saus",
+      "Prijs": 8.50,
+      "Afbeelding": "sprinkhaan.jpg"
+    },
+    {
+      "Naam": "Garnaalkroketten",
+      "Beschrijving": "Huisgemaakte kroketten gevuld met Noordzeegarnalen",
+      "Prijs": 9.50,
+      "Afbeelding": "garnaalkroketten.jpg"
+    },
+    {
+      "Naam": "Carpaccio",
+      "Beschrijving": "Dun gesneden rundvlees met parmezaan en rucola",
+      "Prijs": 11.00,
+      "Afbeelding": "carpaccio.jpg"
+    }
+  ],
+  "Hoofdgerechten": [
+    {
+      "Naam": "Stoofvlees",
+      "Beschrijving": "Klassiek Vlaams stoofvlees met frietjes",
+      "Prijs": 18.50,
+      "Afbeelding": "stoofvlees.jpg"
+    },
+    {
+      "Naam": "Zeebaars",
+      "Beschrijving": "Gegrilde zeebaars met seizoensgroenten",
+      "Prijs": 22.00,
+      "Afbeelding": "zeebaars.jpg"
+    },
+    {
+      "Naam": "Ribeye",
+      "Beschrijving": "Argentijnse ribeye met pepersaus",
+      "Prijs": 26.50,
+      "Afbeelding": "ribeye.jpg"
+    }
+  ],
+  "Nagerechten": [
+    {
+      "Naam": "Tiramisu",
+      "Beschrijving": "Klassieke Italiaanse tiramisu",
+      "Prijs": 7.50,
+      "Afbeelding": "tiramisu.jpg"
+    },
+    {
+      "Naam": "Dame Blanche",
+      "Beschrijving": "Vanille-ijs met warme chocoladesaus",
+      "Prijs": 6.50,
+      "Afbeelding": "dameblanche.jpg"
+    },
+    {
+      "Naam": "Crème Brûlée",
+      "Beschrijving": "Romige vanillecrème met gekarameliseerde suikerlaag",
+      "Prijs": 8.00,
+      "Afbeelding": "cremebrulee.jpg"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+:root{
+  --bg:#b5f09c; --panel:#efecc7; --accent:#1ea31e; --border:#168016;
+  --price:#d51e00; --title:#1e7a1e;
+}
+
+*{box-sizing:border-box}
+
+body{margin:0; font:16px/1.5 "Segoe UI",Arial,sans-serif; background:#c7f7b8}
+
+.page-title{
+  text-align:center; font-size:40px; font-weight:700; color:#0f6c0f;
+  padding:16px 8px;
+}
+.card{
+  max-width:900px; margin:14px auto; background:var(--panel);
+  border:6px solid var(--border); border-radius:6px; padding:16px 20px;
+}
+#detail{display:grid; grid-template-columns:300px 1fr; gap:24px}
+
+#detail img{width:100%; height:220px; object-fit:cover; border:4px solid #222}
+
+.price{color:var(--price); font-weight:700}
+
+.form-row{display:flex; gap:12px; align-items:center; justify-content:center; margin:12px 0}
+
+select, input[type=number]{padding:6px 8px}
+
+.center{display:flex; justify-content:center}
+
+button{
+  background:#b0d031; color:#222; border:2px solid #6e8a10; border-radius:6px;
+  padding:8px 18px; font-weight:700; cursor:pointer;
+}
+
+button:hover{filter:brightness(1.05)}
+
+.cart-title{margin:6px 0 12px; color:var(--title); text-align:center}
+
+.order-line{
+  background:#9fc21c; color:#17270b; padding:8px 10px; margin:6px 0; border-radius:4px;
+}
+
+.total-row{margin-top:10px; text-align:right; font-size:18px}
+
+.notice{color:#b00020; font-weight:700; text-align:center}
+
+@media (max-width:700px){
+  #detail{grid-template-columns:1fr}
+  #keuzeSel{width:100%}
+}

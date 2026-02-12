@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This makes the connection to our compiled ts
+    code. The 'defer' attribute ensures the script runs
+    after HTML parsing, preventing blocking and relying on
+    the fully constructed DOM. -->
+    <script src="index.js" type="module" defer></script>
+    
+    <!-- connect to our stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Tasks</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <input type="text" id="task-input" placeholder="Add new task">
+    <button id="add-button">Add</button>   
+    <ul id="task-list"></ul>
+    <button id="clear-button">Clear all</button>
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>

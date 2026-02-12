@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <script src="script.js" defer></script> -->
+    </head>
+    <body>
+        <h1>Dobbelen met 5 dobbelstenen</h1>
+        <span id="dies">
+            <img src="img/die-1.png">
+            <img src="img/die-1.png">
+            <img src="img/die-1.png">
+            <img src="img/die-1.png">
+            <img src="img/die-1.png">
+        </span>
+        <br />
+        <!-- Either via id & btn.addEventListener, or onclick. Now redundant. -->
+        <button id="btn" onclick="//throwDice();">Gooien</button>
+
+        <p>Score: <span id="score">-</span></p>
+        <p>Aantal worpen: <span id="diceThrows">0</span></p>
+        <p>Statistiek: <span id="statistics"></span></p>
+    </body>
+
+
+    <script>
+
+        var throws = 0;
+        const statsMap = new Map();
+        statsMap.set("Dubbel", 0);
+        statsMap.set("Trio", 0);
+        statsMap.set("Quattro", 0);
+        statsMap.set("Cinquo", 0);
+
+        // 1) Event handler: deze functie wordt uitgevoerd bij het event
+        function throwDice() {
+
+            const score = document.getElementById("score");
+            const btn = document.getElementById("btn");
+            const diceThrows = document.getElementById("diceThrows");
+            const statistics = document.getElementById("statistics");
+
+            var combinationOfThrows = [];
+            var mostMultiples = 0;
+            var mostMultiples_eyes = 0;
+            var feedback = "";
+            
+            // throw dies, change images, keep array:
+            throws++;
+            for(let i = 0;i < 5; i++){
+                let random6 = Math.floor(Math.random()*6)+1;
+                const imgElement = document.getElementById('dies').getElementsByTagName('img')[i];
+                imgElement.src = "img/die-" + random6 + ".png";
+                combinationOfThrows[i] = random6;
+            }
+
+            // count multiples:
+            sortedThrows = combinationOfThrows.toSorted();
+            
+            for(let eyes = 1;eyes <= 6; eyes++){
+                var diesWithXEyes = sortedThrows.filter(x => x == eyes).length;
+                if (diesWithXEyes > mostMultiples){
+                    mostMultiples = diesWithXEyes;
+                    mostMultiples_eyes = eyes;
+                }
+            }
+
+            switch (mostMultiples){
+                case 2:
+                    feedback = " Dubbel (" + mostMultiples_eyes + ")";
+                    statsMap.set("Dubbel", statsMap.get("Dubbel") + 1)
+                    break;
+                case 3:
+                    feedback = " Trio (" + mostMultiples_eyes + ")";
+                    statsMap.set("Trio", statsMap.get("Trio") + 1)
+                    break;
+                case 4:
+                    feedback = " Quattro (" + mostMultiples_eyes + ")";
+                    statsMap.set("Quattro", statsMap.get("Quattro") + 1)
+                    break;
+                case 5:
+                    feedback = " Cinquo (" + mostMultiples_eyes + ")";
+                    statsMap.set("Cinquo", statsMap.get("Cinquo") + 1)
+                    break;
+                default: ;
+            }
+
+            diceThrows.textContent = throws;
+            score.textContent = feedback;
+            statistics.textContent = ([...statsMap.entries()]);
+        }
+        
+        // 2) Event listener: koppelt het click-event aan de event handler
+        btn.addEventListener("click", throwDice);
+
+    </script>
+</html>

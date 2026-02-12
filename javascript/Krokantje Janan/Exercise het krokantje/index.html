@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+
+  <!-- <head> instellingen + links (niet zichtbaar op de pagina) -->
+<head>
+  <meta charset="utf-8" />   <!-- zorgt dat speciale tekens (’, é, €) goed getoond worden.-->
+  <title>Resto 'Het Krokantje'</title>   <!-- titel in het browser-tabblad.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />   <!--maakt de pagina responsive op gsm/tablet.-->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<!--alles wat zichtbaar is-->
+<body>
+  <header class="page-title">Resto 'Het Krokantje'</header>
+
+  <!-- Detailkaart van het huidige gerecht -->
+  <section class="card" id="detail">
+    <img id="dishImg" src="" alt="" /> <!--JS zal later src en alt invullen.  src="": start leeg, omdat JS de juiste afbeelding gaat zetten zodra er ee gerecht gekozen is.-->
+    <div class="meta">
+      <p><b>Naam :</b> <span id="dishName"></span></p>
+      <p><b>Prijs :</b> <span id="dishPrice" class="price"></span></p>
+      <p><b>Beschrijving :</b><br><span id="dishDesc"></span></p>
+    </div>
+  </section>
+
+  <!-- Selectie + bestellen -->
+  <section class="card">
+    <div class="form-row">
+      <label for="gangSel"><b>Gang :</b></label>  <!--koppelt het label aan de select.-->
+      <select id="gangSel"></select>    <!--JS vult hier de gangen in (bv. “Voorgerecht”, “Hoofdgerecht”…).-->
+    </div>
+
+    <div class="form-row">
+      <label for="keuzeSel"><b>Keuze :</b></label>
+      <select id="keuzeSel" size="5"></select>   <!--maakt er een lijst van met 5 zichtbare rijen-->
+    </div>
+
+    <div class="form-row">
+      <label for="aantal"><b>Aantal personen :</b></label>
+      <input id="aantal" type="number" min="0" step="1" value="0" />
+    </div>
+
+    <!--Bestel knop-->
+    <div class="center">
+      <button id="btnBestel">Bestel</button>
+    </div>
+  </section>
+
+  <!-- Bestellingen -->
+  <section class="card">
+    <h2 class="cart-title">Uw Bestellingen</h2>
+    <div id="bestellingen"></div>
+    <div class="total-row">
+      <b>TotaalPrijs :</b> <span id="totaal" class="price">€0.00</span>
+    </div>
+  </section>
+
+  <script src="js/app.js" defer></script>  <!--JavaScript-bestand-->
+</body>
+</html>

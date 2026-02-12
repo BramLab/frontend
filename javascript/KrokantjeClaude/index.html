@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het Krokantje - Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Het Krokantje</h1>
+            <p class="subtitle">Selecteer uw gerechten</p>
+        </header>
+
+        <main>
+            <div class="selection-section">
+                <div class="form-group">
+                    <label for="gangen">Gang:</label>
+                    <select id="gangen">
+                        <option value="">-- Selecteer een gang --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="keuze">Keuze:</label>
+                    <select id="keuze">
+                        <option value="">-- Selecteer eerst een gang --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dish-display">
+                <div class="dish-image">
+                    <img id="dishImage" src="" alt="Gerecht afbeelding">
+                </div>
+                <div class="dish-info">
+                    <h2 id="dishName">-</h2>
+                    <p id="dishDescription">-</p>
+                    <p class="price">Prijs: €<span id="dishPrice">0.00</span></p>
+                </div>
+            </div>
+
+            <div class="order-section">
+                <div class="form-group">
+                    <label for="aantalPersonen">Aantal personen:</label>
+                    <input type="number" id="aantalPersonen" min="1" value="1">
+                </div>
+                <button id="bestelBtn" class="btn-order">Bestellen</button>
+            </div>
+
+            <div class="orders-section">
+                <h3>Bestellingen</h3>
+                <div id="bestellingenLijst">
+                    <p class="empty-orders">Nog geen bestellingen</p>
+                </div>
+                <div class="total-section">
+                    <h3>Totaal: €<span id="totaalPrijs">0.00</span></h3>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

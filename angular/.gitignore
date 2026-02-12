@@ -1,0 +1,10 @@
+node_modules
+OneDrive_1_9-2-2026.zip
+first_app_*.zip
+first-app_/
+.angular
+.angular-cache
+dist
+tmp
+out-tsc
+coverage

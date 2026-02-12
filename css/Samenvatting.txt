@@ -1,0 +1,7 @@
+
+Volgorde/hierarchie structuur:
+https://stackoverflow.com/questions/53312628/which-one-comes-first-main-tag-or-section-tag
+
+
+A wrapper in HTML is a container element that is used to group and structure other elements within a web page. It is created by using a <div> tag or any other suitable HTML tag. The purpose of creating a wrapper in HTML is to provide a way to organize and manage the layout and styling of the content within it.
+
